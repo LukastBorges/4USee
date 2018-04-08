@@ -14,12 +14,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './components/app.component';
 import { DashboardService } from './services/dashboard.service';
 import { IconPipe } from './pipes/icon.pipe';
+import { CategoryPipe } from './pipes/category.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IconPipe
+    IconPipe,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
