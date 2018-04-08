@@ -12,6 +12,10 @@
     bottom: 0px;
 }
 
+mat-icon.checked {
+    color: #64DD17 !important;
+}
+
 .main-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

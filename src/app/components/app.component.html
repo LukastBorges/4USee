@@ -1,10 +1,20 @@
 <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
   <h1>{{title}}</h1>
+  <button mat-mini-fab [matMenuTriggerFor]="filterMenu" matTooltip="Filter by category" matTooltipPosition="left" matTooltipShowDelay="500">
+    <mat-icon>filter_list</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div class="loading" fxLayout="row" fxLayoutAlign="center center" *ngIf="loading">
   <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
 </div>
+
+<mat-menu #filterMenu="matMenu">
+  <button mat-menu-item *ngFor="let filter of filters" (click)="setFilter(filter)">
+    <mat-icon class="checked">{{activeFilter === filter ? 'done' : ''}}</mat-icon>
+    <span>{{filter}}</span>
+  </button>
+</mat-menu>
 
 <div class="main-wrapper" *ngIf="!loading">
   <mat-card fxLayout="column" fxLayoutAlign="center center" *ngFor="let item of data">
