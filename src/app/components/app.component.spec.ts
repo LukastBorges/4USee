@@ -1,11 +1,28 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { HttpClientModule } from '@angular/common/http'
+
+import { DashboardService } from '../services/dashboard.service';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MatCardModule,
+        MatToolbarModule,
+        MatProgressSpinnerModule,
+        HttpClientModule
+      ],
       declarations: [
         AppComponent
       ],
+      providers: [
+        DashboardService
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
