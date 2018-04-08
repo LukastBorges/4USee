@@ -4,10 +4,12 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HttpClientModule } from '@angular/common/http'
 
 import { DashboardService } from '../services/dashboard.service';
+import { IconPipe } from '../pipes/icon.pipe';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,10 +17,12 @@ describe('AppComponent', () => {
         MatCardModule,
         MatToolbarModule,
         MatProgressSpinnerModule,
+        MatIconModule,
         HttpClientModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        IconPipe
       ],
       providers: [
         DashboardService
