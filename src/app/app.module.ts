@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app.component';
 import { DashboardService } from './services/dashboard.service';
 
 
