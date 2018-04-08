@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { DashboardService } from '../services/dashboard.service';
 import { IconPipe } from '../pipes/icon.pipe';
+import { CategoryPipe } from '../pipes/category.pipe';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,7 +27,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        IconPipe
+        IconPipe,
+        CategoryPipe
       ],
       providers: [
         DashboardService

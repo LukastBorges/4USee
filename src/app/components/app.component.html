@@ -17,7 +17,7 @@
 </mat-menu>
 
 <div class="main-wrapper" *ngIf="!loading">
-  <mat-card fxLayout="column" fxLayoutAlign="center center" *ngFor="let item of data">
+  <mat-card fxLayout="column" fxLayoutAlign="center center" *ngFor="let item of data | category: activeFilter, item">
     <img [src]="item.thumbnail" alt="sample">
     <mat-card-header>
       <mat-card-title>{{item.title}}</mat-card-title>
