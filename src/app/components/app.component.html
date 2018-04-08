@@ -12,6 +12,7 @@
     <mat-card-header>
       <mat-card-title>{{item.title}}</mat-card-title>
       <mat-card-subtitle fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="h-padding">{{item.type | iconPipe}}</mat-icon>
         {{item.type}}
       </mat-card-subtitle>
     </mat-card-header>
