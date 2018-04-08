@@ -1,0 +1,20 @@
+{
+  "main": "index.html",
+  "name": "4yousee",
+  "description": "nw.js package for the 4YouSee challenge",
+  "version": "1.0.0",
+  "keywords": [ "sample", "node-webkit", "challenge", "4yousee" ],
+  "window": {
+    "title": "4YouSee Challenge",
+    "icon": "favicon-32x32.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 1280,
+    "height": 720,
+    "position": "center",
+    "fullscreen": true
+  },
+  "webkit": {
+    "plugin": false
+  }
+}
