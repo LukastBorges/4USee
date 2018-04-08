@@ -8,8 +8,16 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        {
+          "input": "./assets/",
+          "glob": "*.png",
+          "output": "."
+        },
+        {
+          "input": "./assets/",
+          "glob": "*.json",
+          "output": "."
+        }
       ],
       "index": "index.html",
       "main": "main.ts",

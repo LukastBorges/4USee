@@ -8,9 +8,9 @@ import { DashboardService } from '../services/dashboard.service';
 })
 export class AppComponent implements OnInit {
   title = '4YouSee Challenge';
-  private loading: boolean;
+  public loading: boolean;
   private data: any[];
-  private filters: any[];
+  public filters: any[];
   private activeFilter: string;
 	 
   constructor (private dashboardService: DashboardService) { }
