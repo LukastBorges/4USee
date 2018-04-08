@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   title = '4YouSee Challenge';
   private loading: boolean;
   private data: any[];
+  private filters: any[];
+  private activeFilter: string;
 	 
   constructor (private dashboardService: DashboardService) { }
   
@@ -28,8 +30,13 @@ export class AppComponent implements OnInit {
             temp.push(elmt.category);
           }
         });
+        this.filters = temp;
         this.loading = false;
       });
   }
 
+  setFilter(filter: string) {
+    this.activeFilter = filter === this.activeFilter ? '' : filter;
+    this.getData();
+  }
 }
